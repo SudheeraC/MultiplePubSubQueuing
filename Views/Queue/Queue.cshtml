@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "Queue";
+}
+
+<h2>Queue</h2>
+<form action="/Queue/Publish">
+@using (Html.BeginForm("Publish", "Queue", FormMethod.Post))
+{
+    <label>Enter the message to be published -</label>
+ <input id="q" name="sMessage" type="text" />
+    <button name="button" type="submit">Publish</button>
+    }
+<b>@ViewBag.Result</b>
